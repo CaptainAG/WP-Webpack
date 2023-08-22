@@ -14,7 +14,9 @@
   "dependencies": {
     "bootstrap": "^5.3.1",
     "jquery": "^3.7.0",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "gsap": "^3.12.2",
+    "swiper": "^10.2.0"
   },
   "devDependencies": {
     "webpack": "^5.88.2",
