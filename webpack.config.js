@@ -3,7 +3,12 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
-  entry: './src/index.js',
+  entry: {
+    main: [
+      "./src/scss/styles.scss",
+      "./src/js/index.js"
+    ]
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -42,6 +47,10 @@ const config = {
   },
   plugins: [
     new MiniCssExtractPlugin()
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    })
   ]
 };
 
